@@ -1,0 +1,11 @@
+{% extends 'main/base.html' %}
+{% block content %}
+<form method="POST">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="OK">
+</form> 
+<p class="text-center">Não possui conta?
+    <a href="/accounts/register">Cadastre-se</a>.
+</p>
+{% endblock content %}
